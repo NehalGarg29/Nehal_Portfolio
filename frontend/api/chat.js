@@ -5,7 +5,7 @@ const SYSTEM_PROMPT = `You are Nehal's AI assistant on her portfolio website. Yo
 NAME: Nehal Garg | LOCATION: Los Angeles, CA | STATUS: Open to Opportunities, Graduating May 2026
 
 EDUCATION:
-- MS Computer Science — USC, GPA 3.56, Aug 2024–May 2026
+- MS Computer Science — USC, GPA 3.63, Aug 2024–May 2026
 - BTech Computer Science — GGSIPU, GPA 3.72, Aug 2020–June 2024
 
 EXPERIENCE:
@@ -22,10 +22,12 @@ EXPERIENCE:
    - Redesigned B2B dashboard; cut API latency 35%
 
 PROJECTS:
+- GitStage (React, FastAPI, PostgreSQL, Celery, Redis, OpenAI): AI-powered codebase RAG chatbot; parses Python AST into semantic chunks. GitHub: https://github.com/NehalGarg29/gitstage
 - EmoTunes (Python, TensorFlow, OpenCV, Spotify API, CNN): 85% emotion recognition accuracy; mood-based playlists. GitHub: https://github.com/NehalGarg29/EmoTunes
 - Artist Discovery Android App (Kotlin, Jetpack Compose, Retrofit, MongoDB, JWT): Artsy API + JWT auth. GitHub: https://github.com/NehalGarg29/ArtsyApi
 - AppleGo (React.js, Django, MySQL, Google Maps API): Analyzed 50K+ queries for Apple device price discovery
 - Smart Patient Room (Go, Expo, React Native, PostgreSQL): Hospital management system, 6-table schema, real-time vitals. GitHub: https://github.com/NehalGarg29/Hospitality-Management-Platform
+- Baseline – Gamified Productivity App (React Native, Expo, TypeScript, Node.js, Express, SQLite): XP system, level progression, dark-forest HUD, AI performance coach. GitHub: https://github.com/NehalGarg29/Baseline
 
 SKILLS: Java, Python, C++, JavaScript, TypeScript, Kotlin, GoLang | React, Node.js, Express, Django, Flask, TensorFlow, PyTorch, Next.js | Git, Docker, AWS, GCP, MongoDB, MySQL, PostgreSQL, Firebase | NumPy, Pandas, Scikit-learn, REST APIs, CI/CD, Agile
 

@@ -37,7 +37,7 @@ export default function About({ portfolio }) {
                 <div className="about-text reveal-child" style={{ ...childStyle }}>
                     <p>
                         Hey! I'm <strong>Nehal Garg</strong>, a software engineer based in <strong>Los Angeles, CA</strong>,
-                        currently pursuing my <strong>MS in Computer Science at USC</strong> (May 2026).
+                        holding an <strong>MS in Computer Science from USC</strong> (Graduated May 2026, GPA 3.63).
                     </p>
                     <p>
                         I love building things — from full-stack web apps using <strong>React</strong> and <strong>Node.js</strong>,
@@ -62,6 +62,19 @@ export default function About({ portfolio }) {
                             <div className="edu-meta">
                                 <span className="edu-gpa">GPA: {edu.gpa}</span>
                                 <span>{edu.period}</span>
+                                {edu.status && (
+                                    <span style={{
+                                        background: 'rgba(0,255,136,0.15)',
+                                        color: 'var(--accent)',
+                                        border: '1px solid rgba(0,255,136,0.4)',
+                                        borderRadius: '4px',
+                                        padding: '2px 8px',
+                                        fontSize: '0.72rem',
+                                        fontWeight: '600',
+                                        letterSpacing: '0.05em',
+                                        textTransform: 'uppercase'
+                                    }}>✓ {edu.status}</span>
+                                )}
                             </div>
                             <div style={{ marginTop: '0.6rem', fontSize: '0.8rem', color: 'var(--text-muted)', lineHeight: '1.5' }}>
                                 {edu.courses}

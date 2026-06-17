@@ -33,7 +33,7 @@ export default function Projects({ projects }) {
                         ref={el => cardRefs.current[i] = el}
                         style={{ transitionDelay: `${(i % 2) * 0.15}s` }}
                     >
-                        <span className="project-icon">{PROJECT_ICONS[i % PROJECT_ICONS.length]}</span>
+                        <span className="project-icon">{proj.icon || PROJECT_ICONS[i % PROJECT_ICONS.length]}</span>
                         <div className="project-name">{proj.name}</div>
                         <div className="project-stack">
                             {proj.stack?.map((tech, j) => (

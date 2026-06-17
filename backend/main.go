@@ -15,6 +15,7 @@ type Education struct {
 	School  string `json:"school"`
 	GPA     string `json:"gpa"`
 	Period  string `json:"period"`
+	Status  string `json:"status,omitempty"`
 	Courses string `json:"courses"`
 }
 
@@ -32,6 +33,7 @@ type Project struct {
 	Stack      []string `json:"stack"`
 	Bullets    []string `json:"bullets"`
 	GithubLink string   `json:"githubLink"`
+	Icon       string   `json:"icon,omitempty"`
 }
 
 type Publication struct {
@@ -74,8 +76,9 @@ func getPortfolioData() Portfolio {
 			{
 				Degree:  "Masters of Science in Computer Science",
 				School:  "University of Southern California",
-				GPA:     "3.56",
+				GPA:     "3.63",
 				Period:  "Aug 2024 – May 2026",
+				Status:  "Graduated",
 				Courses: "Algorithm Analysis, Web Technologies, Applied NLP, Machine Learning, Data Management, Software Engineering, Affective Computing",
 			},
 			{
@@ -138,9 +141,21 @@ func getPortfolioData() Portfolio {
 		},
 		Projects: []Project{
 			{
+				Name:       "GitStage – AI-Powered Codebase Chatbot",
+				Stack:      []string{"React", "FastAPI", "PostgreSQL", "Celery", "Redis", "OpenAI"},
+				GithubLink: "https://github.com/NehalGarg29/gitstage",
+				Icon:       "🚀",
+				Bullets: []string{
+					"Ingests Python codebases and parses AST structure into semantic chunks for vector embedding generation.",
+					"Developed a robust RAG chatbot using FastAPI, pgvector, and OpenAI for interactive developer queries.",
+					"Orchestrated background ingestion queues utilizing Celery and Redis to handle concurrent repository parsing.",
+				},
+			},
+			{
 				Name:       "EmoTunes – AI Music Recommendation Engine",
 				Stack:      []string{"Python", "TensorFlow", "OpenCV", "Spotify API", "CNN"},
 				GithubLink: "https://github.com/NehalGarg29/EmoTunes",
+				Icon:       "🎵",
 				Bullets: []string{
 					"Engineered a real-time emotion recognition system using CNN trained on FER-2013, achieving 85% accuracy across 7 emotions.",
 					"Integrated with Spotify API to generate mood-based playlists, reducing manual search and increasing engagement.",
@@ -151,6 +166,7 @@ func getPortfolioData() Portfolio {
 				Name:       "Artist Discovery Android App",
 				Stack:      []string{"Kotlin", "Jetpack Compose", "Retrofit", "MongoDB", "JWT"},
 				GithubLink: "https://github.com/NehalGarg29/ArtsyApi",
+				Icon:       "🎨",
 				Bullets: []string{
 					"Created a modern Android app to search, view, and favorite artists using the Artsy API with JWT-based secure authentication.",
 					"Persisted user interactions (favorites) using MongoDB and managed UI state using Jetpack Compose and ViewModel architecture.",
@@ -161,6 +177,7 @@ func getPortfolioData() Portfolio {
 				Name:       "AppleGo – Product Discovery Platform",
 				Stack:      []string{"React.js", "Django", "MySQL", "Google Maps API", "REST APIs"},
 				GithubLink: "https://github.com/NehalGarg29",
+				Icon:       "💻",
 				Bullets: []string{
 					"Analyzed 50K+ search queries to evaluate decentralized retailer visibility and pricing.",
 					"Built Django + MySQL backend for real-time retailer inventory sync and Apple product comparison.",
@@ -170,10 +187,22 @@ func getPortfolioData() Portfolio {
 				Name:       "Smart Patient Room – Hospital Management",
 				Stack:      []string{"Go", "Expo", "React Native", "PostgreSQL", "REST APIs"},
 				GithubLink: "https://github.com/NehalGarg29/Hospitality-Management-Platform",
+				Icon:       "🏥",
 				Bullets: []string{
 					"Built full-stack hospital management system with Go compliance engine and Expo/React Native mobile app.",
 					"Designed PostgreSQL schema with 6 tables, full audit trail, and real-time patient vitals monitoring.",
 					"Implemented REST API compliance engine with audit logging, seeded test data, and concurrent vitals simulation.",
+				},
+			},
+			{
+				Name:       "Baseline – Gamified Productivity App",
+				Stack:      []string{"React Native", "Expo", "TypeScript", "Node.js", "Express", "SQLite"},
+				GithubLink: "https://github.com/NehalGarg29/Baseline",
+				Icon:       "🧗",
+				Bullets: []string{
+					"Built gamified habit-tracking mobile app with XP system, daily quests, and level progression.",
+					"Designed immersive dark-forest HUD with 3D avatars and glassmorphic UI components.",
+					"Integrated AI performance coach with adaptive coaching based on user habits.",
 				},
 			},
 		},
@@ -249,6 +278,6 @@ func main() {
 	mux.HandleFunc("/api/portfolio", corsMiddleware(portfolioHandler))
 	mux.HandleFunc("/api/github-stats", corsMiddleware(githubStatsHandler))
 
-	fmt.Println("🚀 Portfolio API running at http://localhost:8080")
-	log.Fatal(http.ListenAndServe(":8080", mux))
+	fmt.Println("🚀 Portfolio API running at http://localhost:8082")
+	log.Fatal(http.ListenAndServe(":8082", mux))
 }

@@ -152,6 +152,17 @@ func getPortfolioData() Portfolio {
 				},
 			},
 			{
+				Name:       "AiroLite – AI Resource Optimization for Logistics",
+				Stack:      []string{"Next.js", "Express", "PostgreSQL", "Prisma", "Claude API", "TypeScript"},
+				GithubLink: "https://github.com/NehalGarg29/AiroLite",
+				Icon:       "🚚",
+				Bullets: []string{
+					"Developed driver assignment algorithms aligning availability with vehicle specifications and route needs.",
+					"Built a route optimization engine to reorder multi-stop deliveries for shortest path and duration across local networks.",
+					"Designed a Samsung/LG product return Kanban tracker with Claude-backed disposition recommendations.",
+				},
+			},
+			{
 				Name:       "EmoTunes – AI Music Recommendation Engine",
 				Stack:      []string{"Python", "TensorFlow", "OpenCV", "Spotify API", "CNN"},
 				GithubLink: "https://github.com/NehalGarg29/EmoTunes",
@@ -160,6 +171,28 @@ func getPortfolioData() Portfolio {
 					"Engineered a real-time emotion recognition system using CNN trained on FER-2013, achieving 85% accuracy across 7 emotions.",
 					"Integrated with Spotify API to generate mood-based playlists, reducing manual search and increasing engagement.",
 					"Combined OpenCV-based face tracking with async audio logic and real-time feedback for responsive music transitions.",
+				},
+			},
+			{
+				Name:       "Baseline – Gamified Productivity App",
+				Stack:      []string{"React Native", "Expo", "TypeScript", "Node.js", "Express", "SQLite"},
+				GithubLink: "https://github.com/NehalGarg29/Baseline",
+				Icon:       "🧗",
+				Bullets: []string{
+					"Built gamified habit-tracking mobile app with XP system, daily quests, and level progression.",
+					"Designed immersive dark-forest HUD with 3D avatars and glassmorphic UI components.",
+					"Integrated AI performance coach with adaptive coaching based on user habits.",
+				},
+			},
+			{
+				Name:       "Smart Patient Room – Hospital Management",
+				Stack:      []string{"Go", "Expo", "React Native", "PostgreSQL", "REST APIs"},
+				GithubLink: "https://github.com/NehalGarg29/Hospitality-Management-Platform",
+				Icon:       "🏥",
+				Bullets: []string{
+					"Built full-stack hospital management system with Go compliance engine and Expo/React Native mobile app.",
+					"Designed PostgreSQL schema with 6 tables, full audit trail, and real-time patient vitals monitoring.",
+					"Implemented REST API compliance engine with audit logging, seeded test data, and concurrent vitals simulation.",
 				},
 			},
 			{
@@ -181,28 +214,6 @@ func getPortfolioData() Portfolio {
 				Bullets: []string{
 					"Analyzed 50K+ search queries to evaluate decentralized retailer visibility and pricing.",
 					"Built Django + MySQL backend for real-time retailer inventory sync and Apple product comparison.",
-				},
-			},
-			{
-				Name:       "Smart Patient Room – Hospital Management",
-				Stack:      []string{"Go", "Expo", "React Native", "PostgreSQL", "REST APIs"},
-				GithubLink: "https://github.com/NehalGarg29/Hospitality-Management-Platform",
-				Icon:       "🏥",
-				Bullets: []string{
-					"Built full-stack hospital management system with Go compliance engine and Expo/React Native mobile app.",
-					"Designed PostgreSQL schema with 6 tables, full audit trail, and real-time patient vitals monitoring.",
-					"Implemented REST API compliance engine with audit logging, seeded test data, and concurrent vitals simulation.",
-				},
-			},
-			{
-				Name:       "Baseline – Gamified Productivity App",
-				Stack:      []string{"React Native", "Expo", "TypeScript", "Node.js", "Express", "SQLite"},
-				GithubLink: "https://github.com/NehalGarg29/Baseline",
-				Icon:       "🧗",
-				Bullets: []string{
-					"Built gamified habit-tracking mobile app with XP system, daily quests, and level progression.",
-					"Designed immersive dark-forest HUD with 3D avatars and glassmorphic UI components.",
-					"Integrated AI performance coach with adaptive coaching based on user habits.",
 				},
 			},
 		},

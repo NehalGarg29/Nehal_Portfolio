@@ -23,11 +23,12 @@ EXPERIENCE:
 
 PROJECTS:
 - GitStage (React, FastAPI, PostgreSQL, Celery, Redis, OpenAI): AI-powered codebase RAG chatbot; parses Python AST into semantic chunks. GitHub: https://github.com/NehalGarg29/gitstage
+- AiroLite (Next.js, Express, PostgreSQL, Prisma, Claude API, TypeScript): AI resource optimization for logistics with driver assignment, route optimizer, and return tracker. GitHub: https://github.com/NehalGarg29/AiroLite
 - EmoTunes (Python, TensorFlow, OpenCV, Spotify API, CNN): 85% emotion recognition accuracy; mood-based playlists. GitHub: https://github.com/NehalGarg29/EmoTunes
-- Artist Discovery Android App (Kotlin, Jetpack Compose, Retrofit, MongoDB, JWT): Artsy API + JWT auth. GitHub: https://github.com/NehalGarg29/ArtsyApi
-- AppleGo (React.js, Django, MySQL, Google Maps API): Analyzed 50K+ queries for Apple device price discovery
-- Smart Patient Room (Go, Expo, React Native, PostgreSQL): Hospital management system, 6-table schema, real-time vitals. GitHub: https://github.com/NehalGarg29/Hospitality-Management-Platform
 - Baseline – Gamified Productivity App (React Native, Expo, TypeScript, Node.js, Express, SQLite): XP system, level progression, dark-forest HUD, AI performance coach. GitHub: https://github.com/NehalGarg29/Baseline
+- Smart Patient Room (Go, Expo, React Native, PostgreSQL): Hospital management system, 6-table schema, real-time vitals. GitHub: https://github.com/NehalGarg29/Hospitality-Management-Platform
+- Artist Discovery Android App (Kotlin, Jetpack Compose, Retrofit, MongoDB, JWT): Artsy API + JWT auth. GitHub: https://github.com/NehalGarg29/ArtsyApi
+- AppleGo (React.js, Django, MySQL, Google Maps API): Analyzed 50K+ queries for Apple device price discovery. GitHub: https://github.com/NehalGarg29
 
 SKILLS: Java, Python, C++, JavaScript, TypeScript, Kotlin, GoLang | React, Node.js, Express, Django, Flask, TensorFlow, PyTorch, Next.js | Git, Docker, AWS, GCP, MongoDB, MySQL, PostgreSQL, Firebase | NumPy, Pandas, Scikit-learn, REST APIs, CI/CD, Agile
 

@@ -31,10 +31,11 @@ export default function Experience({ experience }) {
                         ref={el => itemRefs.current[i] = el}
                         style={{ transitionDelay: `${i * 0.1}s` }}
                     >
-                        <div className="timeline-dot" />
-                        <div className="exp-card">
+                        <div className={`timeline-dot${i === 0 ? ' current' : ''}`} />
+                        <div className={`exp-card${i === 0 ? ' current' : ''}`}>
                             <div className="exp-header">
                                 <div>
+                                    {i === 0 && <span className="current-role-label">Current role</span>}
                                     <div className="exp-title">{exp.title}</div>
                                     <div className="exp-company">{exp.company}</div>
                                 </div>

@@ -52,7 +52,7 @@ export default function Hero({ portfolio, githubStats }) {
                 <div className="hero-content">
                     <div className="hero-badge">
                         <span className="hero-badge-dot" />
-                        Open to Opportunities · 2026
+                        ML/AI Engineer Intern · Allyvia
                     </div>
 
                     <h1 className="hero-name">{portfolio?.name || 'Nehal Garg'}</h1>

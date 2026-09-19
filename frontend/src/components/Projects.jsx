@@ -29,7 +29,7 @@ export default function Projects({ projects }) {
                 {projects?.map((proj, i) => (
                     <div
                         key={i}
-                        className="project-card"
+                        className={`project-card${i === 0 ? ' featured' : ''}`}
                         ref={el => cardRefs.current[i] = el}
                         style={{ transitionDelay: `${(i % 2) * 0.15}s` }}
                     >

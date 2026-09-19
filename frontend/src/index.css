@@ -398,10 +398,15 @@ section {
 
 .avatar-caption {
   bottom: 13%;
-  left: 10%;
-  color: var(--text-muted);
-  font-size: 0.68rem;
-  letter-spacing: 0.4px;
+  left: 7%;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid rgba(103, 232, 249, 0.2);
+  border-radius: 7px;
+  background: rgba(8, 20, 24, 0.82);
+  color: var(--text-primary);
+  font-size: 0.66rem;
+  letter-spacing: 0.25px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes greetingFloat {

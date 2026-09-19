@@ -18,7 +18,7 @@ function AvatarScene() {
 
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(32, 1, 0.1, 100);
-        camera.position.z = 5;
+        camera.position.z = 6.35;
 
         const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -109,7 +109,7 @@ function AvatarScene() {
                 <span className="avatar-greeting-dot" />
                 Hi, I&apos;m Nehal!
             </div>
-            <div className="avatar-caption">Building thoughtful systems</div>
+            <div className="avatar-caption">Building through problems</div>
         </div>
     );
 }

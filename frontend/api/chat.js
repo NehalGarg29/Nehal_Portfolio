@@ -9,20 +9,27 @@ EDUCATION:
 - BTech Computer Science — GGSIPU, GPA 3.72, Aug 2020–June 2024
 
 EXPERIENCE:
-1. Software Engineer Intern — ZofAI (June–Sept 2025, San Francisco, CA) | Next.js, TypeScript, Prisma, PostgreSQL, GCP, Docker
+1. ML/AI Engineer Intern — Allyvia (Aug 2026–Present, Los Angeles Metropolitan Area, Remote) | Django, Django REST Framework, PostgreSQL, QuickBooks Online, Stripe
+    - Resolved production QuickBooks Online integration bugs corrupting financial data; prevented duplicate accounting entries and incorrect payout calculations for SMB customers
+    - Built idempotent retry safeguards and 40+ automated tests for reliable financial API writes against network failures; traced P&L metrics end-to-end for accurate reporting
+    - Delivered fintech features independently across Stripe and QuickBooks integrations, from founder scoping through code review
+
+2. Software Engineer Intern — ZofAI (June–Sept 2025, San Francisco, CA) | Next.js, TypeScript, Prisma, PostgreSQL, GCP, Docker
    - Built full-stack features for 5+ client QA automation teams; cut query times 30%; deployed on GCP with Docker + CI/CD
 
-2. Software Engineer Intern — Essell 24 (Sept–Nov 2023, San Francisco, CA) | TypeScript, React.js, REST APIs
+3. Software Engineer Intern — Essell 24 (Sept–Nov 2023, San Francisco, CA) | TypeScript, React.js, REST APIs
    - Reduced page load latency 16% via lazy loading; redesigned REST APIs
 
-3. Software Developer Intern — Hammer Lifestyle (June–Aug 2023, India) | React Native, Redux, Node.js, Firebase, MongoDB
+4. Software Developer Intern — Hammer Lifestyle (June–Aug 2023, India) | React Native, Redux, Node.js, Firebase, MongoDB
    - Health-tracking smartwatch module; reduced sync failures 24%; served 10K+ users
 
-4. Software Developer Intern — Nyadeko (Mar–May 2023, India) | React.js, TypeScript, Node.js, MongoDB, JWT
+5. Software Developer Intern — Nyadeko (Mar–May 2023, India) | React.js, TypeScript, Node.js, MongoDB, JWT
    - Redesigned B2B dashboard; cut API latency 35%
 
 PROJECTS:
+- Ledgerly – AI Treasury Reconciliation Platform (Next.js, TypeScript, PostgreSQL, Prisma, Anthropic, Vitest): full-stack municipal treasury platform for bank and general-ledger ingestion, exact/fuzzy reconciliation, explainable confidence scoring, anomaly detection, policy checks, audit logs, and compliance evidence exports. GitHub: https://github.com/NehalGarg29/Ledgerly | Live demo: https://ledgerly-kohl-three.vercel.app
 - GitStage (React, FastAPI, PostgreSQL, Celery, Redis, OpenAI): AI-powered codebase RAG chatbot; parses Python AST into semantic chunks. GitHub: https://github.com/NehalGarg29/gitstage
+- DeepResearchAgent (Python, FastAPI, Groq, ChromaDB, SQLite, Docker): memory-augmented research agent with query decomposition, semantic retrieval, token/retrieval budgets, session logging, and self-evaluation. GitHub: https://github.com/NehalGarg29/DeepResearchAgent
 - AiroLite (Next.js, Express, PostgreSQL, Prisma, Claude API, TypeScript): AI resource optimization for logistics with driver assignment, route optimizer, and return tracker. GitHub: https://github.com/NehalGarg29/AiroLite
 - EmoTunes (Python, TensorFlow, OpenCV, Spotify API, CNN): 85% emotion recognition accuracy; mood-based playlists. GitHub: https://github.com/NehalGarg29/EmoTunes
 - Baseline – Gamified Productivity App (React Native, Expo, TypeScript, Node.js, Express, SQLite): XP system, level progression, dark-forest HUD, AI performance coach. GitHub: https://github.com/NehalGarg29/Baseline

@@ -33,6 +33,7 @@ type Project struct {
 	Stack      []string `json:"stack"`
 	Bullets    []string `json:"bullets"`
 	GithubLink string   `json:"githubLink"`
+	DemoLink   string   `json:"demoLink,omitempty"`
 	Icon       string   `json:"icon,omitempty"`
 }
 
@@ -91,6 +92,19 @@ func getPortfolioData() Portfolio {
 		},
 		Experience: []Experience{
 			{
+				Title:    "ML/AI Engineer Intern",
+				Company:  "Allyvia",
+				Period:   "Aug 2026 – Present",
+				Location: "Los Angeles Metropolitan Area · Remote",
+				Stack:    "Django, Django REST Framework, PostgreSQL, QuickBooks Online, Stripe",
+				Bullets: []string{
+					"Resolved critical bugs in a production QuickBooks Online integration that were corrupting financial data, preventing duplicate accounting entries and incorrect payout calculations for SMB customers.",
+					"Built idempotent retry safeguards and 40+ automated tests to make financial API writes reliable against network failures.",
+					"Improved finance dashboard reporting accuracy by tracing and validating P&L metrics end-to-end from raw data to customer-facing results.",
+					"Delivered fintech features independently across Stripe and QuickBooks integrations, from scoping with founders through code review.",
+				},
+			},
+			{
 				Title:    "Software Engineer Intern",
 				Company:  "ZofAI",
 				Period:   "June 2025 – Sept 2025",
@@ -141,6 +155,18 @@ func getPortfolioData() Portfolio {
 		},
 		Projects: []Project{
 			{
+				Name:       "Ledgerly – AI Treasury Reconciliation Platform",
+				Stack:      []string{"Next.js", "TypeScript", "PostgreSQL", "Prisma", "Anthropic", "Vitest"},
+				GithubLink: "https://github.com/NehalGarg29/Ledgerly",
+				DemoLink:   "https://ledgerly-kohl-three.vercel.app",
+				Icon:       "💼",
+				Bullets: []string{
+					"Built a full-stack municipal treasury platform that ingests bank and general-ledger files for automated reconciliation.",
+					"Combined exact and fuzzy matching with explainable confidence scoring, anomaly detection, and policy checks.",
+					"Added an Anthropic-powered review agent with tool calls, role-based access, audit logs, and compliance evidence exports.",
+				},
+			},
+			{
 				Name:       "GitStage – AI-Powered Codebase Chatbot",
 				Stack:      []string{"React", "FastAPI", "PostgreSQL", "Celery", "Redis", "OpenAI"},
 				GithubLink: "https://github.com/NehalGarg29/gitstage",
@@ -149,6 +175,17 @@ func getPortfolioData() Portfolio {
 					"Ingests Python codebases and parses AST structure into semantic chunks for vector embedding generation.",
 					"Developed a robust RAG chatbot using FastAPI, pgvector, and OpenAI for interactive developer queries.",
 					"Orchestrated background ingestion queues utilizing Celery and Redis to handle concurrent repository parsing.",
+				},
+			},
+			{
+				Name:       "DeepResearchAgent – Memory-Augmented Research Assistant",
+				Stack:      []string{"Python", "FastAPI", "Groq", "ChromaDB", "SQLite", "Docker"},
+				GithubLink: "https://github.com/NehalGarg29/DeepResearchAgent",
+				Icon:       "🔎",
+				Bullets: []string{
+					"Built an API-backed research agent that decomposes complex questions into focused sub-queries before synthesis.",
+					"Used ChromaDB semantic retrieval and SQLite session logs to create persistent research memory.",
+					"Added token and retrieval budgets plus self-evaluation scoring to make agent behavior observable and bounded.",
 				},
 			},
 			{

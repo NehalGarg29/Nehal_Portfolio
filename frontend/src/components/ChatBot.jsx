@@ -11,7 +11,7 @@ const WELCOME = "Hi! I'm Nehal's AI assistant 👋 Ask me anything about her bac
 
 // Map keywords → section IDs
 const SECTION_MAP = [
-    { id: 'experience', label: 'Experience', keywords: ['experience', 'intern', 'internship', 'job', 'work', 'company', 'zofai', 'essell', 'hammer', 'nyadeko', 'worked', 'career', 'role'] },
+    { id: 'experience', label: 'Experience', keywords: ['experience', 'intern', 'internship', 'job', 'work', 'company', 'allyvia', 'zofai', 'essell', 'hammer', 'nyadeko', 'worked', 'career', 'role'] },
     { id: 'projects', label: 'Projects', keywords: ['project', 'built', 'emotunes', 'artsyapi', 'applego', 'hospital', 'smart room', 'android', 'app', 'github'] },
     { id: 'skills', label: 'Skills', keywords: ['skill', 'tech stack', 'stack', 'language', 'framework', 'tool', 'python', 'react', 'golang', 'go', 'kotlin', 'tensorflow', 'docker', 'aws', 'gcp', 'technology'] },
     { id: 'publications', label: 'Publications', keywords: ['publication', 'paper', 'research', 'published', 'ijraset', 'ijisrt', 'blockchain', 'journal'] },

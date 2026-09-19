@@ -40,8 +40,8 @@ export default function Hero({ portfolio, githubStats }) {
     }, [displayed, deleting, titleIdx]);
 
     const stats = [
-        { label: 'Internships', value: '4+' },
-        { label: 'Projects', value: '10+' },
+        { label: 'Internships', value: '5+' },
+        { label: 'Projects', value: '9' },
         { label: 'Publications', value: '2' },
     ];
 

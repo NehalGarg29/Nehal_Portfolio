@@ -325,11 +325,94 @@ section {
   justify-content: center;
 }
 
-.hero-illustration svg {
+.avatar-stage {
+  position: relative;
+  width: min(100%, 500px);
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-items: center;
+  isolation: isolate;
+}
+
+.avatar-stage::before {
+  content: '';
+  position: absolute;
+  width: 72%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(103, 232, 219, 0.16), transparent 68%);
+  filter: blur(18px);
+  z-index: -1;
+}
+
+.avatar-canvas {
   width: 100%;
-  max-width: 480px;
-  height: auto;
-  filter: drop-shadow(0 20px 40px rgba(124, 58, 237, 0.12));
+  height: 100%;
+  display: block;
+  filter: drop-shadow(0 24px 32px rgba(0, 0, 0, 0.3));
+}
+
+.avatar-greeting,
+.avatar-caption {
+  position: absolute;
+  z-index: 2;
+  font-family: 'JetBrains Mono', monospace;
+  white-space: nowrap;
+}
+
+.avatar-greeting {
+  top: 13%;
+  right: 2%;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid rgba(103, 232, 219, 0.3);
+  border-radius: 10px 10px 3px 10px;
+  background: rgba(11, 27, 31, 0.88);
+  color: var(--accent-cyan);
+  font-size: 0.75rem;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.24);
+  animation: greetingFloat 3.2s ease-in-out infinite;
+}
+
+.avatar-greeting::after {
+  content: '';
+  position: absolute;
+  right: 18px;
+  bottom: -7px;
+  width: 13px;
+  height: 13px;
+  border-right: 1px solid rgba(103, 232, 219, 0.3);
+  border-bottom: 1px solid rgba(103, 232, 219, 0.3);
+  background: #0b1b1f;
+  transform: skewY(35deg) rotate(35deg);
+}
+
+.avatar-greeting-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 0.45rem;
+  border-radius: 50%;
+  background: var(--accent-emerald);
+  box-shadow: 0 0 10px var(--accent-emerald);
+}
+
+.avatar-caption {
+  bottom: 13%;
+  left: 10%;
+  color: var(--text-muted);
+  font-size: 0.68rem;
+  letter-spacing: 0.4px;
+}
+
+@keyframes greetingFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
 }
 
 .hero-badge {
@@ -1645,8 +1728,8 @@ footer span {
     order: -1;
   }
 
-  .hero-illustration svg {
-    max-width: 300px;
+  .avatar-stage {
+    max-width: 360px;
   }
 
   .about-grid {
@@ -1699,6 +1782,18 @@ footer span {
 
   .pub-card {
     flex-direction: column;
+  }
+
+  .avatar-greeting {
+    top: 8%;
+    right: 0;
+    font-size: 0.68rem;
+  }
+
+  .avatar-caption {
+    bottom: 8%;
+    left: 7%;
+    font-size: 0.6rem;
   }
 
   .contact-grid {

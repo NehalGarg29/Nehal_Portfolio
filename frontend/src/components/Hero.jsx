@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import * as THREE from 'three';
 
 const TITLES = [
     'Software Engineer',
@@ -8,13 +9,108 @@ const TITLES = [
     'React & Go Builder',
 ];
 
-function WorkspaceIllustration() {
+function AvatarScene() {
+    const canvasRef = useRef(null);
+
+    useEffect(() => {
+        const canvas = canvasRef.current;
+        if (!canvas) return undefined;
+
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(32, 1, 0.1, 100);
+        camera.position.z = 5;
+
+        const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        renderer.setClearColor(0x000000, 0);
+
+        const avatar = new THREE.Group();
+        scene.add(avatar);
+
+        const backplate = new THREE.Mesh(
+            new THREE.CircleGeometry(1.43, 64),
+            new THREE.MeshBasicMaterial({ color: 0x102d32, transparent: true, opacity: 0.96 })
+        );
+        backplate.position.z = -0.08;
+        avatar.add(backplate);
+
+        const texture = new THREE.TextureLoader().load('/avatar.png');
+        const portrait = new THREE.Mesh(
+            new THREE.CircleGeometry(1.32, 64),
+            new THREE.MeshBasicMaterial({ map: texture, transparent: true })
+        );
+        avatar.add(portrait);
+
+        const ringMaterial = new THREE.MeshBasicMaterial({ color: 0x8dd3c7, transparent: true, opacity: 0.75 });
+        const ring = new THREE.Mesh(new THREE.TorusGeometry(1.58, 0.025, 12, 96), ringMaterial);
+        ring.rotation.z = 0.2;
+        avatar.add(ring);
+
+        const orbit = new THREE.Mesh(
+            new THREE.TorusGeometry(1.78, 0.012, 10, 96),
+            new THREE.MeshBasicMaterial({ color: 0x67e8f9, transparent: true, opacity: 0.5 })
+        );
+        orbit.rotation.x = Math.PI * 0.42;
+        orbit.rotation.y = Math.PI * 0.14;
+        avatar.add(orbit);
+
+        const node = new THREE.Mesh(
+            new THREE.SphereGeometry(0.09, 20, 20),
+            new THREE.MeshBasicMaterial({ color: 0xf59e8b })
+        );
+        node.position.set(1.78, 0.42, 0.1);
+        avatar.add(node);
+
+        const resize = () => {
+            const { width, height } = canvas.getBoundingClientRect();
+            renderer.setSize(width, height, false);
+            camera.aspect = width / height;
+            camera.updateProjectionMatrix();
+        };
+        resize();
+        window.addEventListener('resize', resize);
+
+        let frame;
+        const animate = (time) => {
+            const seconds = time * 0.001;
+            avatar.position.y = Math.sin(seconds * 1.2) * 0.07;
+            avatar.rotation.y = Math.sin(seconds * 0.65) * 0.08;
+            avatar.rotation.x = Math.cos(seconds * 0.5) * 0.025;
+            ring.rotation.z += 0.002;
+            orbit.rotation.z -= 0.0015;
+            node.position.y = 0.42 + Math.sin(seconds * 1.8) * 0.08;
+            renderer.render(scene, camera);
+            frame = requestAnimationFrame(animate);
+        };
+        frame = requestAnimationFrame(animate);
+
+        return () => {
+            cancelAnimationFrame(frame);
+            window.removeEventListener('resize', resize);
+            texture.dispose();
+            portrait.geometry.dispose();
+            portrait.material.dispose();
+            backplate.geometry.dispose();
+            backplate.material.dispose();
+            ring.geometry.dispose();
+            ring.material.dispose();
+            orbit.geometry.dispose();
+            orbit.material.dispose();
+            node.geometry.dispose();
+            node.material.dispose();
+            renderer.dispose();
+        };
+    }, []);
+
     return (
-        <img
-            src="/workspace.png"
-            alt="Isometric developer workspace"
-            style={{ width: '100%', maxWidth: '480px', height: 'auto', filter: 'drop-shadow(0 20px 40px rgba(124,58,237,0.12))' }}
-        />
+        <div className="avatar-stage">
+            <canvas ref={canvasRef} className="avatar-canvas" aria-label="Animated 3D portrait of Nehal Garg" />
+            <div className="avatar-greeting" aria-hidden="true">
+                <span className="avatar-greeting-dot" />
+                Hi, I&apos;m Nehal!
+            </div>
+            <div className="avatar-caption">Building thoughtful systems</div>
+        </div>
     );
 }
 
@@ -104,9 +200,9 @@ export default function Hero({ portfolio, githubStats }) {
                     </div>
                 </div>
 
-                {/* Right — illustration */}
+                {/* Right — animated personal avatar */}
                 <div className="hero-illustration">
-                    <WorkspaceIllustration />
+                    <AvatarScene />
                 </div>
             </div>
         </section>

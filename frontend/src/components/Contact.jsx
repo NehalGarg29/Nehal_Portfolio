@@ -105,7 +105,7 @@ export default function Contact({ portfolio }) {
                     </div>
 
                     {/* Resume download */}
-                    <a href="/Nehal_Garg_Resume_.pdf" download="Nehal_Garg_Resume_.pdf" className="contact-resume-btn">
+                    <a href="/Nehal_Garg_Resume.pdf" download="Nehal_Garg_Resume.pdf" className="contact-resume-btn">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                             <polyline points="7 10 12 15 17 10" />
